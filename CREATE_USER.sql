@@ -3,3 +3,7 @@ ALTER SESSION SET "_ORACLE_SCRIPT" = TRUE;
 CREATE USER TESTADMIN IDENTIFIED BY Pa$$w0rd;
 
 GRANT CONNECT, RESOURCE, DBA TO TESTADMIN;
+
+SELECT username, default_tablespace, temporary_tablespace 
+FROM dba_users 
+WHERE username = 'TESTADMIN';
